@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Driver's License"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/dark_green"
+        android:gravity="center"
+        android:layout_marginTop="100dp" />
+
+    <ImageView
+        android:id="@+id/icon_drive"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/icon_drive" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <!-- First TextInputLayout -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:hint="Ano Atual"
+            app:boxStrokeColor="@color/middle_green"
+            app:hintTextColor="@color/dark_green">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_currentYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Second TextInputLayout -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:hint="Ano de Nascimento"
+            app:boxStrokeColor="@color/middle_green"
+            app:hintTextColor="@color/dark_green">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:inputType="date"
+                android:maxLength="4"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_calculator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:padding="10dp"
+        android:backgroundTint="@color/dark_green"
+        android:textColor="@color/white"
+        android:text="Calcular"
+        />
+
+
+    <ImageView
+        android:id="@+id/icon_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_refresh"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="-5dp"
+        android:layout_gravity="center"
+        android:clickable="true"
+        />
+
+
+
+    <TextView
+        android:id="@+id/txt_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/dark_green"
+        android:textStyle="bold"/>
+
+
+
+
+
+
+</LinearLayout>
